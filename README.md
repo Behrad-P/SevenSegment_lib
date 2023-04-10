@@ -4,7 +4,7 @@ I tested this library on atmega32 and stm32f103r6 microcontrollers.
 
 3 types of connections between micro and sevensegments are included in this library.
 
-__1. BCD__
+# 1. BCD
 
 code:
 
@@ -34,7 +34,7 @@ while (1)
 ![Uploading sevendegment_BCD.png…]()
 
 
-__2. SPI__
+# 2. SPI
 
 code:
 
@@ -64,7 +64,7 @@ while (1)
 ![Uploading sevendegment_SPI.png…]()
 
 
-__3. DIRECT__
+# 3. DIRECT
 
 code:
 
@@ -91,10 +91,10 @@ while (1)
     }
 }
 ```
-![Uploading sevendegment_DIRECT.png…]()
+![sevendegment_DIRECTMode](sevendegment_DIRECT.png)
 
-**Note:** 
-All connections and functions are the same in stm32f103r6 microcontroller
+The above 3 examples are tested on the Atmega32 microcontroller.
+All connections and functions are the same in stm32f103r6 microcontroller.
 
 
 
