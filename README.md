@@ -31,7 +31,9 @@ while (1)
 }
 
 ```
-![Uploading sevendegment_BCD.png…]()
+
+![sevendegment_BCD](https://user-images.githubusercontent.com/129272853/230951598-46248a43-f659-4e6e-9e25-ee010a56fc9b.png)
+
 
 
 # 2. SPI
@@ -61,7 +63,9 @@ while (1)
 }
 
 ```
-![Uploading sevendegment_SPI.png…]()
+
+![sevendegment_SPI](https://user-images.githubusercontent.com/129272853/230951541-e69c9e58-29f7-4203-9569-83d996c0a911.png)
+
 
 
 # 3. DIRECT
@@ -91,7 +95,9 @@ while (1)
     }
 }
 ```
-![sevendegment_DIRECTMode](sevendegment_DIRECT.png)
+
+![sevendegment_DIRECT](https://user-images.githubusercontent.com/129272853/230951488-9f96c7fb-34de-475f-9cd7-701c128f3fbb.png)
+
 
 The above 3 examples are tested on the Atmega32 microcontroller.
 All connections and functions are the same in stm32f103r6 microcontroller.
