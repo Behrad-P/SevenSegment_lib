@@ -1,4 +1,4 @@
-# Seven segment driver for STM32 and AVR Microcontroller
+# Sevensegment driver for STM32 and AVR Microcontroller
 
 I tested this library on atmega32 and stm32f103r6 microcontrollers.
 
