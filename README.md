@@ -1,7 +1,7 @@
 # SevenSegment_lib
 Seven segment driver for STM32 and AVR Microcontroller
 
- __Example: (AVR) Microcontroller
+ __Example: (AVR) Microcontroller__
 
 I use Atmega32 in this example
 
