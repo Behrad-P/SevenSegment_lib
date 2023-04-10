@@ -4,7 +4,7 @@ I tested this library on atmega32 and stm32f103r6 microcontrollers.
 
 3 types of connections between micro and sevensegments are included in this library.
 
-# 1. BCD
+** 1. BCD **
 
 code:
 
@@ -36,7 +36,7 @@ while (1)
 
 
 
-# 2. SPI
+** 2. SPI **
 
 code:
 
@@ -68,7 +68,7 @@ while (1)
 
 
 
-# 3. DIRECT
+** 3. DIRECT **
 
 code:
 
