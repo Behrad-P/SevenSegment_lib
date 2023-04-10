@@ -1,13 +1,11 @@
 # SevenSegment_lib
 Seven segment driver for STM32 and AVR Microcontroller
 
-I use Stm32f103c8 and Keil Compiler and Stm32CubeMX wizard.
-Please Do This ...
+ __Example: (AVR) Microcontroller
 
-1) Select "General peripheral Initalizion as a pair of '.c/.h' file per peripheral" on project settings.
-2) Config your LCD Pins on CubeMX.
-3) Config your LCD pins on "LCD_Config.h".
-4) Call LCD_Init() and Enjoy!!
+I use Atmega32 in this example
+
+1) in direct mode:
 
 ```
 #include "LCD.h"
