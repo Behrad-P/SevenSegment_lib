@@ -93,8 +93,8 @@ while (1)
 ```
 ![Uploading sevendegment_DIRECT.png…]()
 
-
-
+**Note:** 
+All connections and functions are the same in stm32f103r6 microcontroller
 
 
 
