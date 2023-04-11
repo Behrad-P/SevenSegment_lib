@@ -2,7 +2,7 @@
 
 I tested this library on atmega32 and stm32f103r6 microcontrollers.
 
-3 types of connections between micro and sevensegments are included in this library.
+3 types of connections between micro and sevensegment are included in this library.
 
 __1. BCD__
 
