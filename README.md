@@ -1,12 +1,30 @@
-# Sevensegment driver for STM32 and AVR Microcontroller
+# SevenSegment Driver Library for STM32 and AVR Microcontrollers
 
-I tested this library on atmega32 and stm32f103r6 microcontrollers.
+This library provides a robust and flexible driver for seven-segment displays, compatible with STM32 and AVR microcontrollers. It has been tested on the ATmega32 and STM32F103R6 microcontrollers.
 
-3 types of connections between micro and sevensegment are included in this library.
+## Features
 
-__1. BCD__
+- Supports multiple types of connections between microcontrollers and seven-segment displays.
+- Easy integration with existing projects.
+- Well-documented and organized code for easy customization and extension.
 
-code:
+## Supported Microcontrollers
+
+- ATmega32
+- STM32F103R6
+
+## Connection Types
+
+This library includes support for three types of connections between the microcontroller and the seven-segment display:
+
+1. Direct connection
+2. SPI
+3. Shift register-based connection (BCD)
+
+
+## 1. BCD
+
+__example:__
 
 ```
 #include <mega32.h>
@@ -35,9 +53,9 @@ while (1)
 ![sevendegment_BCD](https://user-images.githubusercontent.com/129272853/230951598-46248a43-f659-4e6e-9e25-ee010a56fc9b.png)
 
 
-__2. SPI__
+## 2. SPI
 
-code:
+__example:__
 
 ```
 
@@ -67,9 +85,9 @@ while (1)
 
 
 
-__3. DIRECT__
+## 3. DIRECT
 
-code:
+__example:__
 
 ```
 
