@@ -11,70 +11,63 @@
 
 #include "main.h"
 
+/** Communication protocol definitions **/
+#define SPI                 0x10
+#define BCD                 0x11
+#define DIRECT              0x12
 
-/**communication protocol define**/
+/** Seven-segment display type definitions **/
+#define CC                  0x20
+#define CA                  0x21
 
-#define spi                 0x10
-#define bcd                 0x11
-#define direct              0x12
+/** Data port and control port definitions **/
+#define DATA_PORT           GPIOC
+#define CONTROL_PORT        GPIOB
 
-
-/**sevensegment type define**/
-
-#define cc                  0x20
-#define ca                  0x21
-
-
-/**dataport and controlport define**/
-
-#define data_port           GPIOC
-#define control_port        GPIOB
+/** Determining the delay between control port and data port based on CPU cycles method
+ *  Note: CPUCLK / CPU_FRQ_DIVIDER = ticks or the number of cycles that the CPU waits **/
+#define CPU_FRQ_DIVIDER     40000UL
 
 
-/**Determining the delay between control port and data port based on CPU cycles method**
-Note: CPUCLK / CPU_frq_divider = ticks or the number of cycles that CPU waits**/
-
-#define CPU_frq_divider	    40000UL
-
-
-/**stcp pins for data latching in 74hc595 ic**
-stcp_C_pin/port: latch control pin/port 
-stcp_D_pin/port: latch data pin/port**/
-
-#define stcp_C_port         GPIOC
-#define stcp_D_port         GPIOC
-#define stcp_C_pin          GPIO_PIN_0
-#define stcp_D_pin          GPIO_PIN_1
+/** STCP pins for data latching in 74HC595 IC
+ *  stcp_C_pin/port: latch control pin/port 
+ *  stcp_D_pin/port: latch data pin/port **/
+#define STCP_C_PORT         GPIOC
+#define STCP_D_PORT         GPIOC
+#define STCP_C_PIN          GPIO_PIN_0
+#define STCP_D_PIN          GPIO_PIN_1
 
 /**
- * @brief  To display the number on sevensegment
- * @note   This function must be executed continuously (with delay 5ms or less)
- * @param  Number: The number we want to be displayed in sevensegment
+ * @brief  Displays a number on the seven-segment display.
+ * @note   This function must be executed continuously (with a delay of 5ms or less).
+ * @param  Number: The number to be displayed on the seven-segment display.
  * @retval None
  */
 void SevenSegment_Write(float Number);
 
 /**
- * @brief  Initializes sevensegment
- * @param  Protocol: Select the communication protocol
- * (direct(PIN_0 ... PIN_7: data port, PIN_8: dot point) / bcd(PIN_0 ... PIN_3: data port, PIN_4: dot point) / spi(Like direct protocol))
- * @param  Digits: Select the number of digits (2<= digits <=8)
- * @param  LED_Type: Select the sevensegment LED type (cc / ca)
+ * @brief  Initializes the seven-segment display.
+ * @param  Protocol: Selects the communication protocol
+ *                  (DIRECT (PIN_0 ... PIN_7: data port, PIN_8: dot point) / 
+ *                   BCD (PIN_0 ... PIN_3: data port, PIN_4: dot point) / 
+ *                   SPI (like DIRECT protocol)).
+ * @param  Digits: Selects the number of digits (2 <= digits <= 8).
+ * @param  LED_Type: Selects the seven-segment LED type (CC / CA).
  * @retval None
  */
 void SevenSegment_Init(unsigned char Protocol, unsigned char Digits, unsigned char LED_Type);
 
 /**
- * @brief  SevenSegment_Blink
- * @note   This function can be executed one time
- * @param  Blink_Delay: Toggle time = Blink_Delay * SevenSegment_Write function execution time
+ * @brief  Blinks the seven-segment display.
+ * @note   This function can be executed one time.
+ * @param  Blink_Delay: Toggle time = Blink_Delay * SevenSegment_Write function execution time.
  * @retval None
  */
 void SevenSegment_Blink_On(unsigned int Blink_Delay);
 
 /**
- * @brief  Turn off blinking
- * @note   This function can be executed one time
+ * @brief  Turns off blinking of the seven-segment display.
+ * @note   This function can be executed one time.
  * @param  None
  * @retval None
  */
